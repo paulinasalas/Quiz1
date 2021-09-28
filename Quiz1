@@ -1,0 +1,57 @@
+﻿using System;
+
+namespace assignment1
+{
+    class MainClass
+    {
+        static void Main(string[] args)
+
+        {
+            //Welcome Message
+            Console.WriteLine("Regular\t Midgrade\t Premium\t");
+            Console.WriteLine("$4.39\t $4.59\t $4.69\t");
+
+
+            //Welcome Message
+
+            Console.WriteLine("Your Type of gas(R/M/P): ");
+            char gas = Convert.ToChar(Console.ReadLine());
+            
+
+            //Donate
+            Console.WriteLine("Car Wash Today (Y=1/N=2):");
+            char wash = Convert.ToChar(Console.ReadLine());
+           
+            Console.WriteLine("How many gallons:");
+            int gallons = Convert.ToInt32(Console.ReadLine());
+
+            double total = 0;
+
+            if (gas == 'R' && wash == '1')
+            {
+                total = (4.39 * gallons) + 12.00;
+            }
+            else if (gas == 'R' && wash == '2')
+            {
+                total = 4.39 * gallons;
+            }
+            else if (gas == 'M' && wash == '1')
+            {
+                total = (4.59 * gallons) + 12.00;
+            }
+            else if (gas == 'M' && wash == '2')
+            {
+                total = 4.59 * gallons;
+            }
+            else if (gas == 'P' && wash == '1')
+            {
+                total = (4.59 * gallons) + 12.00;
+            }
+            else if (gas == 'P' && wash == '2')
+            {
+                total = 4.59 * gallons;
+            }
+                Console.WriteLine("Your total:" + total + " Gas selected:" + gas + " Gallons:" + gallons);
+        }
+    }
+}
